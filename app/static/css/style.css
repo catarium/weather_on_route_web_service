@@ -1,0 +1,44 @@
+body {
+    font-family: lato;
+}
+
+.input_box {
+    display: flex;
+    justify-content: center;
+}
+
+.input_el {
+    margin: 5px;1
+    padding: 10px;
+}
+
+.text_input {
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #417690;
+    border: none;
+    font-family: sans-serif;
+    align-self: center;
+    width: 300px;
+    margin-top: 10px;
+}
+
+#submit_button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px !important;
+    text-transform: uppercase !important;
+    color: white;
+    background-color: #417690;
+    border: none;
+    text-decoration: none;
+    height: 60px;
+    align-self: center;
+}
+
+#res_box {
+    display: flex;
+    justify-content: space-evenly;
+}

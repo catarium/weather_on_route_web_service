@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class='input_box'>
+            <div class="input_el">
+                <input type="text", class='text_input', id="start_input", placeholder="Пункт отправления">
+            </div>
+            <div class="input_el">
+                <input type="text", class='text_input', id="end_input", placeholder="Пункт назначения">
+            </div>
+            <button class="input_el", id="submit_button", onclick="send()">Отправить</button>
+        </div>
+        <div id='res_box'>
+            
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</html>

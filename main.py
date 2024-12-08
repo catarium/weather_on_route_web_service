@@ -1,4 +1,5 @@
 from app.misc import app
 
 
-app.run()
+print(app.static_folder)
+app.run(debug=True)

@@ -28,21 +28,21 @@ async function send() {
             result.end.precipitation = 'нету'
         }
         if (result.start.is_bad == true) {
-            result.start.precipitation = 'погода плохая'
+            result.start.is_bad = 'погода плохая'
         }
         else {
-            result.start.precipitation = 'погода хорошая'
+            result.start.is_bad = 'погода хорошая'
         }
-        if (result.end.precipitation == true) {
-            result.end.precipitation = 'погода хорошая'
+        if (result.end.is_bad == true) {
+            result.end.is_bad = 'погода плохая'
         }
         else {
-            result.end.precipitation = 'погода плохая'
+            result.end.is_bad = 'погода хорошая'
         }
         res_box.innerHTML = ""
-        html1 = `<div><div><h1> ${startCity.value.toUpperCase()} </h1></div> <div>Температура: ${result.start.temp}</div> <div>Скорость ветра: ${result.start.wind}</div> <div>Вердикт: ${result.start.precipitation}</div></div>`
+        html1 = `<div><div><h1> ${startCity.value.toUpperCase()} </h1></div> <div>Температура: ${result.start.temp}</div> <div>Скорость ветра: ${result.start.wind}</div> <div>Осадки: ${result.start.precipitation}</div> <div>Вердикт: ${result.start.is_bad}</div></div>`
         res_box.insertAdjacentHTML('beforeend', html1)
-        html2 = `<div><div><h1> ${endCity.value.toUpperCase()} </h1></div> <div>Температура: ${result.end.temp}</div> <div>Скорость ветра: ${result.end.wind}</div> <div>Вердикт: ${result.end.precipitation}</div></div>`
+        html2 = `<div><div><h1> ${endCity.value.toUpperCase()} </h1></div> <div>Температура: ${result.end.temp}</div> <div>Скорость ветра: ${result.end.wind}</div> <div>Осадки: ${result.end.precipitation}</div> <div>Вердикт: ${result.end.is_bad}</div></div>`
         res_box.insertAdjacentHTML('beforeend', html2)
     } catch {
         alert('Error!')
